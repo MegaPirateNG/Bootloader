@@ -34,14 +34,19 @@ FLAGS		+= -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 \
 
 ELF		 = $(PRODUCT).elf
 BINARY		 = $(PRODUCT).bin
+HEX              = $(PRODUCT).hex
 
-all:		$(ELF) $(BINARY)
+all:		$(ELF) $(BINARY) $(HEX)
 
 $(ELF):		$(SRCS) $(MAKEFILE_LIST)
 	$(CC) -o $@ $(SRCS) $(FLAGS)
 
 $(BINARY):	$(ELF)
 	$(OBJCOPY) -O binary $(ELF) $(BINARY)
+	
+$(HEX):	$(ELF)
+	$(OBJCOPY) -O ihex $(ELF) $(HEX)
+
 
 #upload: all flash flash-bootloader
 upload: all flash-bootloader
