@@ -8,8 +8,10 @@ px4fmu_bl.bin
 Bootloader.sublime-workspace
 .gdbinit
 px4fmuv2_bl.bin
+px4f4by_bl.bin
 px4discovery_bl.hex
 px4io_bl.hex
 px4flow_bl.hex
 px4fmu_bl.hex
 px4fmuv2_bl.hex
+px4f4by_bl.hex

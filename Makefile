@@ -35,7 +35,7 @@ export COMMON_SRCS	 = bl.c
 #
 # Bootloaders to build
 #
-TARGETS			 = px4fmu_bl px4fmuv2_bl px4flow_bl stm32f4discovery_bl px4io_bl
+TARGETS			 = px4fmu_bl px4fmuv2_bl px4flow_bl stm32f4discovery_bl px4io_bl f4by_bl
 
 # px4io_bl px4flow_bl
 
@@ -51,6 +51,8 @@ clean:
 # Pick an interface supported by the Makefile (USB, UART, I2C)
 # Specify the board type.
 #
+f4by_bl: $(MAKEFILE_LIST)
+	make -f Makefile.f4 TARGET=f4by INTERFACE=USB BOARD=F4BY USBDEVICESTRING="\\\"F4BY BootLoader\\\"" USBPRODUCTID="0x0010"
 
 px4fmu_bl: $(MAKEFILE_LIST)
 	make -f Makefile.f4 TARGET=fmu INTERFACE=USB BOARD=FMU USBDEVICESTRING="\\\"PX4 BL FMU v1.x\\\"" USBPRODUCTID="0x0010"
