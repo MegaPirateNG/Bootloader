@@ -42,7 +42,7 @@ TARGETS			 = px4fmu_bl px4fmuv2_bl px4flow_bl stm32f4discovery_bl px4io_bl f4by_
 all:	$(TARGETS)
 
 clean:
-	rm -f *.elf *.bin
+	rm -f *.elf *.bin *.hex
 
 #
 # Specific bootloader targets.
