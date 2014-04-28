@@ -80,7 +80,9 @@
 #define PROTO_DEVICE_FW_SIZE	4	// size of flashable area
 #define PROTO_DEVICE_VEC_AREA	5	// contents of reserved vectors 7-10
 
-static const uint32_t	bl_proto_rev = 4;	// value returned by PROTO_DEVICE_BL_REV
+
+//F4BY. Downgrade bootloader version. 
+static const uint32_t	bl_proto_rev = 3;	// value returned by PROTO_DEVICE_BL_REV
 
 static unsigned head, tail;
 static uint8_t rx_buf[256];

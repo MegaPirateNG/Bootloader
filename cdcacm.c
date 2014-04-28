@@ -29,7 +29,7 @@
 
 static const char *usb_strings[] = {
 	"",
-	"3D Robotics",
+	USBMANUFACTURERSTRING,
 	USBDEVICESTRING,
 	"0",
 };
